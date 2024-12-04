@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es" data-bs-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generador de Exámenes</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link href="static/style.css" rel="stylesheet">
+</head>
+<body class="bg-dark">
+<div class="container">
+    <h1 class="text-center">Generador de Exámenes</h1>
+    {% if error %}
+        <p style="color: red;">{{ error }}</p>
+    {% endif %}
+    <p>&nbsp;</p>
+
+    <form class="row g-3" action="/generar_cuestionario" method="post">
+       
+            <div class="col md-2">
+                <label for="bloques">Seleccione los bloques:</label>
+                <p>&nbsp;</p>
+                <button type="submit" class="btn btn-secondary">Generar</button>
+            </div>
+            <div class="col md-4">
+                <input class="form-control" placeholder="Ejemplo: 1,2,3" aria-label="Ejemplo: 1,2,3" type="text" name="bloques" required>
+            </div>
+            <div class="col md-2">
+                <label for="num_preguntas">Nº de preguntas por bloque:</label>
+            </div>
+            <div class="col md-4">
+                <input class="form-control" type="number" name="num_preguntas" min="1" required >
+            </div>
+    </form>
+</div>
+ <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" defer></script>
+</body>
+</html>
