@@ -58,12 +58,14 @@ Instalar las dependencias
 
 `pip install -r requirements.txt`
 
-Agregar un archivo preguntas.csv Asegúrate de que el archivo preguntas.csv tenga el siguiente formato:
+Agregar un archivo preguntas.csv. Asegúrate de que el archivo preguntas.csv tenga el siguiente formato:
 
 Bloque,Pregunta,A,B,C,D,Correcta
+
 1, "¿Cuál es la capital de Francia?", "París", "Londres", "Berlín", "Madrid", "A" ```
 
 Ejecutar la aplicación
 
 `uvicorn app.main:app --reload`
+
 Abrir la aplicación en el navegador Ve a http://127.0.0.1:8000.
