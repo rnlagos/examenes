@@ -68,4 +68,4 @@ Ejecutar la aplicación
 
 `uvicorn app.main:app --reload`
 
-Abrir la aplicación en el navegador Ve a http://127.0.0.1:8000.
+Abrir la aplicación en el navegador: http://127.0.0.1:8000.
