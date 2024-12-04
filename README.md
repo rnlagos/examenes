@@ -11,6 +11,7 @@ Una aplicación web para generar y evaluar cuestionarios de forma interactiva, i
 - Cálculo de tiempo total tomado para responder.
 - Identificación de preguntas falladas con sus respuestas correctas.
 - Diseño responsivo e interactivo utilizando Bootstrap 5.
+- Cada respuesta incorrecta descuenta 0.25 puntos del cómputo global.
 
 ### Requisitos
 
