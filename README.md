@@ -69,3 +69,21 @@ Ejecutar la aplicación
 `uvicorn app.main:app --reload`
 
 Abrir la aplicación en el navegador: http://127.0.0.1:8000.
+
+## Uso
+
+- Selecciona los bloques y el número de preguntas que deseas responder.
+- Responde las preguntas del cuestionario.
+- Observa tus resultados en tiempo real,
+
+### Incluye
+
+- Puntuación total.
+- Tiempo total tomado.
+- Preguntas falladas y respuestas correctas.
+
+### Personalización
+
+- Cambiar el diseño: Edita las plantillas HTML en app/templates.
+- Agregar más preguntas: Añade más entradas al archivo preguntas.csv.
+- Modificar reglas de puntuación: Edita la lógica en el endpoint /evaluar en main.py.
