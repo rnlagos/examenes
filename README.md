@@ -3,6 +3,8 @@
 
 Una aplicación web para generar y evaluar cuestionarios de forma interactiva, ideal para estudiantes que deseen practicar y visualizar sus resultados en tiempo real. Los usuarios pueden responder preguntas organizadas en bloques, obtener su puntuación, ver los errores cometidos y las respuestas correctas.
 
+![Captura de pantalla](https://rnlagos.com/images/ksnip_20241204-144309.png)
+
 ### Características:
 
 - Generación de cuestionarios dinámicos a partir de un archivo CSV.
