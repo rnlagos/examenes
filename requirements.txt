@@ -1,0 +1,4 @@
+fastapi==0.100.0  # Framework principal para la API
+uvicorn==0.23.0  # Servidor ASGI para ejecutar FastAPI
+jinja2==3.1.2  # Motor de plantillas para renderizar HTML
+pandas==2.0.3  # Manejo de datos y archivos CSV
