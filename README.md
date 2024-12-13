@@ -11,6 +11,7 @@ Una aplicación web para generar y evaluar cuestionarios de forma interactiva, i
 - Organización de preguntas por bloques temáticos.
 - Visualización de resultados en tiempo real en un menú lateral en la misma página del cuestionario.
 - Cálculo de tiempo total tomado para responder.
+- Las respuestas se calculan en base 10.
 - Identificación de preguntas falladas con sus respuestas correctas.
 - Diseño responsivo e interactivo utilizando Bootstrap 5.
 - Cada respuesta incorrecta descuenta 0.25 puntos del cómputo global.
@@ -18,8 +19,8 @@ Una aplicación web para generar y evaluar cuestionarios de forma interactiva, i
 ### Requisitos
 
 - Python 3.10+ pip o conda para la instalación de dependencias.
-- Un entorno Linux o Windows (también funciona en MacOS).
-- Un archivo preguntas.csv que contenga las preguntas del cuestionario.
+- Funciona en cualquier sistema operativo.
+- Un archivo preguntas.csv que contenga las preguntas del cuestionario con el formato adecuado, mirar más abajo.
 
 ### Dependencias
 
@@ -58,11 +59,11 @@ Instalar las dependencias
 
 `pip install -r requirements.txt`
 
-Agregar un archivo preguntas.csv. Asegúrate de que el archivo preguntas.csv tenga el siguiente formato:
+Agregar un archivo 'preguntas.csv'. Asegúrate de que el archivo preguntas.csv tenga el siguiente formato:
 
 Bloque,Pregunta,A,B,C,D,Correcta
 
-1, "¿Cuál es la capital de Francia?", "París", "Londres", "Berlín", "Madrid", "A" ```
+1, "¿Cuál es la capital de Francia?", "París", "Londres", "Berlín", "Madrid", "A"
 
 Ejecutar la aplicación
 
