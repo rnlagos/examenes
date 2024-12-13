@@ -1,4 +1,4 @@
-# Exámenes
+# Exámenes tipo test
 ## Generador de cuestionarios con resultados en tiempo real
 
 Una aplicación web para generar y evaluar cuestionarios de forma interactiva, ideal para estudiantes que deseen practicar y visualizar sus resultados en tiempo real. Los usuarios pueden responder preguntas organizadas en bloques, obtener su puntuación, ver los errores cometidos y las respuestas correctas.
@@ -9,7 +9,7 @@ Una aplicación web para generar y evaluar cuestionarios de forma interactiva, i
 
 - Generación de cuestionarios dinámicos a partir de un archivo CSV.
 - Organización de preguntas por bloques temáticos.
-- Visualización de resultados en tiempo real en un menú lateral o en una nueva pestaña.
+- Visualización de resultados en tiempo real en un menú lateral en la misma página del cuestionario.
 - Cálculo de tiempo total tomado para responder.
 - Identificación de preguntas falladas con sus respuestas correctas.
 - Diseño responsivo e interactivo utilizando Bootstrap 5.
