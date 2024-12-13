@@ -48,20 +48,21 @@ async def generar_cuestionario(request: Request, bloques: str = Form(...), num_p
 async def evaluar(request: Request, respuestas: str = Form(...), preguntas_json: str = Form(...)):
     from json import loads
 
-    # Convertir JSON a lista de preguntas seleccionadas
+    # Convertir preguntas seleccionadas de JSON a lista
     preguntas_seleccionadas = loads(preguntas_json)
     respuestas_usuario = respuestas.split(",")
-    puntuacion = 0
+    aciertos = 0
+    errores = 0
     preguntas_falladas = []
 
     # Evaluar las respuestas
     for user_resp, pregunta in zip(respuestas_usuario, preguntas_seleccionadas):
         respuesta_correcta = pregunta["Correcta"]
         if user_resp.upper() == respuesta_correcta:
-            puntuacion += 1
+            aciertos += 1
         else:
             if user_resp.strip():  # Solo registrar si el usuario respondió algo
-                puntuacion -= 0.25
+                errores += 1
             # Guardar preguntas falladas
             preguntas_falladas.append({
                 "Pregunta": pregunta["Pregunta"],
@@ -69,19 +70,27 @@ async def evaluar(request: Request, respuestas: str = Form(...), preguntas_json:
                 "Tu_respuesta": user_resp
             })
 
+    # Calcular puntuación final
+    numero_preguntas = len(preguntas_seleccionadas)
+    puntuacion = ((aciertos - (errores * 0.25)) / numero_preguntas) * 10
+
     # Calcular tiempo
     tiempo_fin = datetime.now()
     tiempo_total_segundos = (tiempo_fin - tiempo_inicio).total_seconds()
     minutos = int(tiempo_total_segundos // 60)
     segundos = int(tiempo_total_segundos % 60)
-    tiempo_total_formateado = f"{minutos}:{segundos} secs."
+    tiempo_total_formateado = f"{minutos} minutos y {segundos} segundos"
 
     return templates.TemplateResponse("resultado.html", {
         "request": request,
-        "puntuacion": puntuacion,
+        "puntuacion": round(puntuacion, 2),
+        "aciertos": aciertos,
+        "errores": errores,
+        "numero_preguntas": numero_preguntas,
         "tiempo_total": tiempo_total_formateado,
         "preguntas_falladas": preguntas_falladas
     })
+
 
 
 
