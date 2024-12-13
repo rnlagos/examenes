@@ -35,7 +35,7 @@ Para instalar estas dependencias, usa:
 
 `pip install -r requirements.txt`
 
-Instalación y Configuración
+### Instalación y Configuración
 
 Clonar el repositorio
 
@@ -79,7 +79,7 @@ Abrir la aplicación en el navegador: http://127.0.0.1:8000.
 
 ### Incluye
 
-- Puntuación total.
+- Puntuación total en base 10.
 - Tiempo total tomado.
 - Preguntas falladas y respuestas correctas.
 
