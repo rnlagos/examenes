@@ -35,7 +35,7 @@ Para instalar estas dependencias, usa:
 
 `pip install -r requirements.txt`
 
-### Instalación y Configuración
+### Instalación y configuración
 
 Clonar el repositorio
 
